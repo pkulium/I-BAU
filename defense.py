@@ -166,7 +166,7 @@ if __name__ == "__main__":
 	### initialize theta
 	model = VGG('small_VGG16').to(device)
 	criterion = nn.CrossEntropyLoss()
-	model.load_state_dict(torch.load(args.poi_path)['net'])
+	model.load_state_dict(torch.load(args.poi_path, map_location = 'cuda:0')['net'])
 	if args.optim == 'SGD':
 		outer_opt = torch.optim.SGD(model.parameters(), lr=args.lr)
 	elif args.optim == 'Adam':
