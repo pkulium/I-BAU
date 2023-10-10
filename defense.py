@@ -75,8 +75,8 @@ def get_eval_data(name, attack_name='badnets', target_lab='8', args=None):
 
 		x_poi_test,y_poi_test= patching_test(x_test, y_test, attack_name, target_lab=target_lab)
 
-		y_test = torch.Tensor(y_test.reshape((-1,)).astype(np.int))
-		y_poi_test = torch.Tensor(y_poi_test.reshape((-1,)).astype(np.int))
+		y_test = torch.Tensor(y_test.reshape((-1,)).astype(np.intc))
+		y_poi_test = torch.Tensor(y_poi_test.reshape((-1,)).astype(np.intc))
 
 		x_test = torch.Tensor(np.transpose(x_test,(0,3,1,2)))
 		x_poi_test = torch.Tensor(np.transpose(x_poi_test,(0,3,1,2)))
@@ -96,8 +96,8 @@ def get_eval_data(name, attack_name='badnets', target_lab='8', args=None):
 
 		x_poi_test,y_poi_test= patching_test(x_test, y_test, attack_name, target_lab=target_lab)
 
-		y_test = torch.Tensor(y_test.reshape((-1,)).astype(np.int))
-		y_poi_test = torch.Tensor(y_poi_test.reshape((-1,)).astype(np.int))
+		y_test = torch.Tensor(y_test.reshape((-1,)).astype(np.intc))
+		y_poi_test = torch.Tensor(y_poi_test.reshape((-1,)).astype(np.intc))
 
 		x_test = torch.Tensor(np.transpose(x_test,(0,3,1,2)))
 		x_poi_test = torch.Tensor(np.transpose(x_poi_test,(0,3,1,2)))
